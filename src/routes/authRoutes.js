@@ -1,9 +1,12 @@
-const express = require('express')
+const express = require('express');
+const mongoose = require('mongoose');
+const User = mongoose.model('User');
 
-const router = express.Router()
+const router = express.Router();
 
 router.post('/signup', (req, res) => {
- res.send('post request')
-})
+  console.log(req.body);
+  res.send('post request');
+});
 
-module.exports = router 
+module.exports = router;
